@@ -6,7 +6,7 @@ services:
     build:
       context: .
     volumes:
-      - ./notebooks:/notebooks
+      - ./notebooks:/root/notebooks
       - ./data:/mycar/data
     ports:
       - "8888:8888"

@@ -28,10 +28,12 @@ RUN python --version
 
 RUN donkey createcar --path ~/mycar
 
-WORKDIR /root/mycar
+RUN mkdir /root/notebooks
 
-CMD ["jupyter", "lab","--allow-root"]
+WORKDIR /root/notebooks
 
+# CMD ["jupyter", "lab","--allow-root"]
+CMD ["jupyter", "lab", "--ip='*'", "--port=8888", "--allow-root"]
 EXPOSE 8888
 
 
