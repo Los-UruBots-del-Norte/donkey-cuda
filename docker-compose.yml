@@ -10,4 +10,11 @@ services:
       - ./data:/mycar/data
     ports:
       - "8888:8888"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
