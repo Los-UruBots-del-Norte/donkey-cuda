@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  donkey-cuda:
+    container_name: "donkey-cuda"
+    build:
+      context: .
+    volumes:
+      - ./notebooks:/notebooks
+      - ./data:/mycar/data
+    ports:
+      - "8888:8888"
+
