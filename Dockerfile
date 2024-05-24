@@ -1,4 +1,5 @@
-FROM nvidia/cuda:11.8.0-base-ubuntu20.04
+# FROM nvidia/cuda:11.8.0-base-ubuntu20.04
+FROM nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu20.04
 
 ENV PATH="/root/miniconda3/bin:${PATH}"
 ARG PATH="/root/miniconda3/bin:${PATH}"
@@ -16,7 +17,7 @@ RUN conda init bash \
     && conda activate donkey
 
 RUN conda install python=3.11 -y
-RUN conda install cudatoolkit=11 -c pytorch -y
+RUN conda install cudatoolkit tensorflow-gpu cuddnn -c pytorch -y
 RUN conda install -c conda-forge jupyterlab -y
 RUN pip install --upgrade pip wheel setuptools requests
 RUN pip install donkeycar[pc]
