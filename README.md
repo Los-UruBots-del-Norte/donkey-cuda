@@ -1,4 +1,5 @@
 # DonkeyCar Trainer with CUDA and cudnn
+This starts a container with a Jupyter Lab server which provides a ready-to-use script for training a Donkey Car pilot. Instructions are provided in the ipynb.
 
 ### Requirements
 - Docker
@@ -31,11 +32,11 @@ OR:
 docker compose up
 ```
 
-4 - You can access at http://localhost:8888 to work with conda.
+4 - Access http://localhost:8888 for Jupyter Lab.
 
 5 - Open the Donkey.ipynb file and run the cells.
 
 ### Credits
-- Cris
+- Chris
 - Seba
 - Urubots
